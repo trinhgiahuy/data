@@ -3,3 +3,4 @@ This is a text file after add id_rsa to ssh-agent
 This is a text file after add ed25519_pub to ssh-agent
 This is a text file after add ed25519_pub to ssh-agent
 Permission denied when run sudo bash measurement
+Permission denied when run sudo bash measurement and bash autoupdate in measure script
