@@ -3,6 +3,9 @@
 DATADIR="/home/pi/data"
 cd $DATADIR
 
+echo "Pull from git repository..."
+git pull
+
 if [[ -n $(git status -s) ]]; then
     if [[ -n $(git status --porcelain|grep '2021') ]]; then
 	echo "Files change: Correct year. Pushing changes..."
