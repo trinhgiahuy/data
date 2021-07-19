@@ -4,14 +4,16 @@ DATADIR="/home/pi/data"
 cd $DATADIR
 
 if [[ -n $(git status -s) ]]; then
-    if [[ -z $(git status --porcelain|grep 2025) ]];then	
+    if [[ -n $(git status --porcelain|grep '2021') ]]; then
 	echo "Files change: Correct year. Pushing changes..."
-	git add -A && git commit -m "$1: Update files" && git push origin main
+	git add 2021* && git commit -m "$1: Update files" && git push origin main
     else
-	echo "Files change: Wrong year. Discard changes..."
-	find . -type f -name "2025*" -delete
+	echo "Discard file with wrong years"
+	find . -not -path '*/\.*' -type f -name "2025*" -delete
+	find . -not -path '*/\.*' -type f -name "2024*" -delete
+	find . -not -path '*/\.*' -type f -name "2023*" -delete
+	find . -not -path '*/\.*' -type f -name "2022*" -delete
     fi
-    
-    else
+else
     echo "No changes found. Skip pushing."
 fi
