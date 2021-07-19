@@ -1,6 +1,3 @@
-This is a text file after add id_rsa to ssh-agent
-This is a text file after add id_rsa to ssh-agent
-This is a text file after add ed25519_pub to ssh-agent
-This is a text file after add ed25519_pub to ssh-agent
-Permission denied when run sudo bash measurement
-Permission denied when run sudo bash measurement and bash autoupdate in measure script
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c170301967abe396b112b0ab4f10a7e1728c58f8cbf9de9bf36073deb4c787b
+size 346
